@@ -1,0 +1,25 @@
+[package]
+authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
+categories = ["authentication", "linux"]
+description = "Rust daemon for dealing with AD/AAD/AWS Directory on NixOS."
+edition = "2021"
+homepage = "https://github.com/shymega/nix-directory-svcs"
+keywords = ["pam", "authentication", "linux", "nixos"]
+license = "MIT or LGPL-3.0-only"
+name = "nix-directory-gatekeeper"
+readme = "/README.md"
+repository = "https://github.com/shymega/nix-directory-svcs.git"
+version = "0.1.0"
+
+[dependencies]
+aws-sdk-directory = "1.4.0"
+azure_sdk_auth_aad = "0.47.0"
+clap = "4.4.11"
+config = "0.13.4"
+env_logger = "0.10.1"
+ldap3 = { version = "0.10.6" }
+log = "0.4.20"
+pam = "0.8.0"
+rand = { version = "0.8.5", features = ["serde"] }
+serde = { version = "1.0.193", features = ["derive"] }
+tokio = { version = "1.35.0", features = ["full"] }
